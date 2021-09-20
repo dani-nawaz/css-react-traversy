@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+:root {
+  --color-background: #232946;
+  --color-heading: #fffffe;
+  --color-backgroundNav: #b8c1ec;
+  --color-para: #b8c1ec;
+
+  --color-button: #eebbc3;
+  --color-buttonText: #232946;
+  --color-Link: #232946;
+  --color-hero: #232946;
+}
+body {
+  color: var(--color-para);
+  line-height: 1.6;
+  background: var(--color-background);
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-Link);
+}
+h1,
+h2 {
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 10px 0px;
+  color: var(--color-heading);
+}
+p {
+  color: var(--color-para);
+  margin: 10px 0px;
+  font-weight: normal;
+}
+
+img {
+  width: 100%;
+}
+
+/* 
+===================
+NAVBAR
+===================
+*/
+
+.navbar ul {
+  display: flex;
+}
+.navbar a {
+  padding: 10px;
+  margin: 0px 5px;
+}
+.navbar li {
+  transition: all 0.3s linear;
+}
+.navbar a:hover {
+  border-bottom: 2px solid var(--color-Link);
+  transform: translateY(20px);
+}
+.navbar li:hover {
+  transform: translateY(-2px);
+}
+.navbar .flex {
+  justify-content: space-between;
+}
+.navbar {
+  height: 70px;
+  background: var(--color-backgroundNav);
+}
+.container {
+  max-width: 1100px;
+  margin: 0px auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+===================
+SHOWCASE
+===================
+*/
+.showcase {
+  height: 400px;
+
+  background-color: var(--color-backgroundNav);
+  color: var(--color-hero);
+  /* color: black; */
+  position: relative;
+}
+.showcase h1,
+h2,
+p {
+  color: var(--color-hero);
+}
+.showcase h1 {
+  font-size: 40px;
+}
+.showcase p {
+  margin: 20px 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.showcase .grid {
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+  overflow: visible;
+}
+.card {
+  background-color: #fffffe;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  width: 400px;
+  color: var(--color-para);
+}
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+}
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+.showcase-form input {
+  border: 0;
+  border-bottom: 1px solid var(--color-Link);
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+.showcase-form input:focus {
+  outline: none;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: var(--color-button);
+  color: var(--color-buttonText);
+}
+.btn-primary {
+  background-color: transparent;
+  /* border: 2px solid var(--color-background); */
+  border: 2px solid var(--color-background);
+  background-color: var(--color-background);
+  color: var(--color-para);
+  transition: all 0.3s linear;
+}
+.btn-primary:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-button);
+  /* background-color: ; */
+  color: var(--color-buttonText);
+  transform: scale(1.01, 1.01);
+}
+.btn-outline {
+  background-color: transparent;
+  /* border: 2px solid var(--color-background); */
+  outline: 2px solid var(--color-background);
+  transition: all 0.3s linear;
+}
+.btn-outline:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+  background-color: #eebbc3;
+  transform: scale(1.01, 1.01);
+}
+
+.showcase::before,
+.showcase::after {
+  content: '';
+  position: absolute;
+  height: 100px;
+  bottom: -30px;
+  right: 0;
+  left: 0;
+  background-color: var(--color-backgroundNav);
+  transform: skewY(-3deg);
+}
+
+.stats {
+  padding-top: 100px;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.text-center {
+  text-align: center;
+}
+
+/* margin */
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 1.5rem 0;
+}
+.my-3 {
+  margin: 2rem 0;
+}
+.my-4 {
+  margin: 3rem 0;
+}
+.my-5 {
+  margin: 4rem 0;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 1.5rem 0;
+}
+.py-3 {
+  padding: 2rem 0;
+}
+.py-4 {
+  padding: 3rem 0;
+}
+.py-5 {
+  padding: 4rem 0;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 1.5rem;
+}
+.m-3 {
+  margin: 2rem;
+}
+.m-4 {
+  margin: 3rem;
+}
+.m-5 {
+  margin: 4rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 1.5rem;
+}
+.p-3 {
+  padding: 2rem;
+}
+.p-4 {
+  padding: 3rem;
+}
+.p-5 {
+  padding: 4rem;
+}
+.svg_icons {
+  transform: scale(1.8);
+}
+.stats h3 {
+  color: #fffffe;
+  /* font-size: 16px; */
+}
+.stats-heading {
+  width: 500px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+.stats .grid h3 {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: normal;
+  color: var(--color-para);
+}
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 64px;
+}
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+.cli h3 {
+  font-size: 25px;
+  font-weight: normal;
+  color: var(--color-buttonText);
+}
+.cloud p {
+  color: var(--color-hero);
+}
+.cloud h1,
+h2,
+h3 {
+  color: var(--color-hero);
+}
+/* .btn-dark {
+  background-color: var(--color-button);
+  color: var(--color-buttonText);
+} */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+.btn-dark {
+  background-color: transparent;
+
+  border: 2px solid var(--color-background);
+  background-color: var(--color-background);
+  color: var(--color-para);
+  transition: all 0.3s linear;
+}
+.btn-dark:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-button);
+
+  color: var(--color-buttonText);
+  transform: scale(1.01, 1.01);
+}
+.lead {
+  font-size: 20px;
+}
+.sm {
+  font-size: 1rem;
+}
+.lg {
+  font-size: 3rem;
+}
+.md {
+  font-size: 2rem;
+}
+.cloud {
+  background-color: var(--color-backgroundNav);
+}
+.card h4 {
+  color: var(--color-para);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.languages .flex {
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.languages .card {
+  width: 150px;
+  height: 180px;
+}
+.languages .card h4 {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all linear 0.2s;
+}
+
+.languages .card :hover h4 {
+  transform: translateY(0);
+  opacity: 1;
+}
+.content {
+  width: 100%;
+}
